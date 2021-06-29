@@ -1,6 +1,5 @@
 package guru.springframework.controllers;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +25,7 @@ public class IndexController {
 		//Optional<Category> category = categoryRepository.findByDescription("Mexican");
 		
 		//Optional<UnitOfMeasure> uom = unitOfMeasureRepository.findByDescription("Teaspoon");
+		
 
 		log.debug("I'm in the controller");
 		model.addAttribute("recipes", recipeService.getRecipes());

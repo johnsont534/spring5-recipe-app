@@ -12,8 +12,11 @@ import javax.persistence.OneToOne;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 @EqualsAndHashCode(exclude = {"recipe"})
 @Entity
 public class Ingredient {
@@ -41,6 +44,11 @@ public class Ingredient {
 		this.description = description;
 		this.amount = amount;
 		this.uom = uom;
+	}
+	
+	@Override
+	public String toString() {
+		return amount + " " + uom.getDescription() + " " + description; 
 	}
 
 
